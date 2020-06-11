@@ -176,6 +176,11 @@ register_shutdown_function(
             $uri = $replace_url($uri);
         }
 
+        $prepare_profile = Xhgui_Config::read('profiler.prepare_profile');
+        if (is_callable($prepare_profile)) {
+            $data['profile'] = $prepare_profile($data['profile']);
+        }
+
         $time = array_key_exists('REQUEST_TIME', $_SERVER)
             ? $_SERVER['REQUEST_TIME']
             : time();

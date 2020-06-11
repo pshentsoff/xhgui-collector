@@ -2,6 +2,8 @@
 
 class Xhgui_Util
 {
+    const KEY_DELIMITER = '__';
+
     /**
      * Creates a simplified URL given a standard URL.
      * Does the following transformations:
@@ -18,6 +20,17 @@ class Xhgui_Util
             return call_user_func($callable, $url);
         }
         return preg_replace('/\=\d+/', '', $url);
+    }
+
+    public static function replaceDots(array $profile): array
+    {
+        $result = [];
+        foreach ($profile as $key => $value) {
+            $key = preg_replace('/\./', static::KEY_DELIMITER, $key);
+            $result[$key] = $value;
+        }
+
+        return $result;
     }
 
     /**

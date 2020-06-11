@@ -71,6 +71,11 @@ return array(
     //    return str_replace('token', '', $url);
     //},
 
+    // Callback to prepare profile data (default - removing dots from keys)
+    'profiler.prepare_profile' => function (array $profile) {
+        return Xhgui_Util::replaceDots($profile);
+    },
+
     'profiler.options' => array(),
 
     'profiler.skip_built_in' => false,
