@@ -1,5 +1,5 @@
-[![Build Status](https://scrutinizer-ci.com/g/perftools/xhgui-collector/badges/build.png?b=master)](https://scrutinizer-ci.com/g/perftools/xhgui-collector/build-status/master)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/perftools/xhgui-collector/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/perftools/xhgui-collector/?branch=master)
+[![Build Status](https://scrutinizer-ci.com/g/pshentsoff/xhgui-collector/badges/build.png?b=master)](https://scrutinizer-ci.com/g/pshentsoff/xhgui-collector/build-status/master)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/pshentsoff/xhgui-collector/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/pshentsoff/xhgui-collector/?branch=master)
 
 # XHGUI Collector
 
@@ -10,6 +10,8 @@ This is a small standalone module which you can use to collect and store
  - Compatibility with PHP >= 5.3.0
  - No dependencies aside from the relevant extensions
  - Customizable and configurable so you can build your own logic on top of it
+ - Possibility to prepare profile before saving to database.
+ - Replacing dots at profile keys for compatibility with latest MongoDB versions according to [this](https://docs.mongodb.com/manual/reference/limits/#Restrictions-on-Field-Names) restrictions.
 
 ## XHGUI Compatibility
 
